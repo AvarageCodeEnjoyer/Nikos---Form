@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Totally Legit</title>
-    <link href = "./InfinateMoneyGlitchStyleSheet.css" rel = "StyleSheet">
+    <link href = "../CSS/InfinateMoneyGlitchStyleSheet.css" rel = "StyleSheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
@@ -15,18 +15,20 @@
     <h1 id = "header">InfiniteMoneyGlitchIRL.com</h1>    
 
     <form id = "mainForm">
+
         <fieldset id = "field1">
+
             <legend class = "legend">Select Package</legend>
 
             <div class = "grid-item">
                 
                 <label for = "silver">Silver <br> Package</label>
 
-                <img src = "./Images/silver.png">
+                <img src = "/Images/silver.png">
 
                 <br> 
 
-                <input type = "radio" id = "silver" class = "option" name = "scam">
+                <input type = "radio" id = "silver" class = "option" name = "scam" required>
                 <br> 
 
                 <div>
@@ -42,11 +44,11 @@
 
                 <label for = "gold">Gold <br> Package</label>
 
-                <img src = "./Images/gold.png">
+                <img src = "/Images/gold.png">
 
                 <br> 
                 
-                <input type = "radio" id = "gold" class = "option" name = "scam">
+                <input type = "radio" id = "gold" class = "option" name = "scam" required>
 
                 <br> 
                 
@@ -63,11 +65,11 @@
 
                 <label for = "plate">Platinum <br> Package</label>   
 
-                <img src = "./Images/platinom.png">
+                <img src = "/Images/platinom.png">
 
                 <br> 
 
-                <input type = "radio" id = "plate" class = "option" name = "scam">
+                <input type = "radio" id = "plate" class = "option" name = "scam" required>
 
                 <br> 
 
@@ -101,27 +103,27 @@
             <br>
 
             <label for = "fname">First Name:</label>
-            <input id = "fname" name= "fname" placeholder = "First Name">
+            <input id = "fname" name= "fname" placeholder = "First Name" pattern = "[a-zA-Z]{2,}" required>
             <br>
             <br>
 
             <label for = "lname">Last Name:</label>
-            <input id = "lname" name= "lname" placeholder = "Last Name">
+            <input id = "lname" name= "lname" placeholder = "Last Name"  pattern = "[a-zA-Z]{2,}" required>
             <br>
             <br>
 
             <label for = "email">Email:</label>
-            <input type = "email" id = "email" name = "email" placeholder="Example@gmail.com">
+            <input type = "email" id = "email" name = "email" placeholder="Example@gmail.com" Pattern = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" required>
             <br>
             <br>
 
             <label for = "Id">Upload Your Id:</label>
-            <input type = "file" name = "Id" id = "Id">
+            <input type = "file" name = "Id" id = "Id" required>
             <br>
             <br>
             
             <label for = "ps">Create A Password: </label>
-            <input type="password" id = "ps" name = "password" placeholder = "********">
+            <input type="password" id = "ps" name = "password" placeholder = "********" pattern = "^[a-zA-Z0-9i]+[@$!%*&-+]+{8,}" required>
             <br>
             <br>
             <br>
@@ -131,23 +133,23 @@
             <legend class = "legend">Add Your Address</legend>
             <br>
                 <label for = "str">Street Address:</label>
-                <input id = "str" name = "street" placeholder = "Street Address">
+                <input id = "str" name = "street" placeholder = "Street Address" pattern = "^[0-9\s]+[a-zA-Z\s]+" required>
                 <br>
                 <br>
 
 
                 <label for = "str2">Secondary Address:</label>
-                <input id = "str2" name = "street2" placeholder = "Street Address">
+                <input id = "str2" name = "street2" placeholder = "Street Address" pattern = "^[0-9\s]+[a-zA-Z\s]+">
                 <br>
                 <br>
 
                 <label for = "city">City:</label>
-                <input id = "city" name = "city" placeholder = "City">
+                <input id = "city" name = "city" placeholder = "City" pattern = "[a-zA-Z]+" required>
                 <br>
                 <br>
 
                 <label for = "st">State:</label>
-                <select name = "State" id = "st" size = "1">
+                <select name = "State" id = "st" size = "1" required>
                     <option value = "AL">AL</option>
                     <option value = "AK">AK</option>
                     <option value = "AZ">AZ</option>
@@ -211,17 +213,17 @@
 
 
                 <label for = "zip">Zip Code:</label>
-                <input type = "number" id = "zip" name = "zip" placeholder = "nnnnn">
+                <input type = "number" id = "zip" name = "zip" placeholder = "nnnnn" pattern = "^{5}" required>
                 <br>
                 <br>
                 
                 <label for = "country">Country:</label>
-                <input id = "country" name = "Country" placeholder = "Country">
+                <input id = "country" name = "Country" placeholder = "Country" pattern = "[a-zA-Z]+" required>
                 <br>
                 <br>
 
                 <label for = "ph">Phone #:</label>
-                <input type = "tel" id = "ph" name = "phone" placeholder = "(nnn) nnn-nnnn">
+                <input type = "tel" id = "ph" name = "phone" placeholder = "nnn-nnn-nnnn" pattern = "[0-9]{3}[-][0-9]{3}[-][0-9]{4}" required>
                 <br>
                 <br>
 
@@ -238,20 +240,20 @@
 
             <div id = "field3">
                 <div class = "icon">
-                    <img src = "./Images/visa-credit-card.png" class = "visa">
-                    <input class = "visa" type="radio" name = "CardChoice">
+                    <img src = "/Images/visa-credit-card.png" class = "visa">
+                    <input class = "visa" type="radio" name = "CardChoice" required>
                     
                 </div>
 
                 <div class = "icon">
-                    <img src = "./Images/master-card.png" class = "master-card">
-                    <input class = "master-card" type="radio" name = "CardChoice">
+                    <img src = "/Images/master-card.png" class = "master-card">
+                    <input class = "master-card" type="radio" name = "CardChoice" required>
                     
                 </div>
 
                 <div class = "icon">
-                    <img src = "./Images/paypal.png" class = "paypal">
-                    <input class = "paypal" type="radio" name = "CardChoice">
+                    <img src = "/Images/paypal.png" class = "paypal">
+                    <input class = "paypal" type="radio" name = "CardChoice" required>
                     
                 </div>
             </div>
@@ -260,17 +262,17 @@
             
         
             <label for = "ccn">Credit Card Number:</label>
-            <input type = "number" id = "ccn" name = "creditCard" placeholder="nnnn-nnnn-nnnn-nnnn">
+            <input type = "number" id = "ccn" name = "creditCard" placeholder="nnnn-nnnn-nnnn-nnnn"  pattern = "[0-9]{16}" required>
             <br>
             <br>
 
             <label for = "ed">Expiration Date:</label>
-            <input type = "date" class = "ed" name = "ExpirationDate">
+            <input type = "date" class = "ed" name = "ExpirationDate" required>
             <br>
             <br>
 
             <label for = "csc">Wacky Numbers on the Back:</label>
-            <input type = "number" id = "csc" name = "wacky numbers" placeholder = "nnn">
+            <input type = "number" id = "csc" name = "wacky numbers" placeholder = "nnn" pattern = "[0-9]{3}" required>
             <br>
             
             
@@ -289,13 +291,13 @@
         <br>
         <br>
 
-        <input type = "checkbox" name="Terms And Service" id = "TermsAndService" class = "checkbox">
+        <input type = "checkbox" name="Terms And Service" id = "TermsAndService" class = "checkbox" required>
         <label for = "TermsAndService">Terms And Service (We Know You Won't Read Them)</label>
         <br>
         <br>
 
-        <input type = "checkbox" name = "recomend" id = "recomend" class = "checkbox">
-        <label for = "recomend">Would You Refer This Scam To A Friend? (10% off next Order)</label>
+        <input type = "checkbox" name = "recommend" id = "recommend" class = "checkbox">
+        <label for = "recommend">Would You Refer This Scam To A Friend? (10% next Order)</label>
         <br>
         <br>
         <br>
@@ -311,7 +313,7 @@
         <br>
 
         <label for = "color">Select Yellow (To Prove Your Not A Robot)</label>
-        <input type = "color" id = "color">
+        <input type = "color" id = "color" required>
         <br>
         <br>
         <br>
@@ -343,7 +345,7 @@
    
 
     <h2 class= "rightBar">Ransom Ware!</h2>
-    <div class = "rightBar">Ransomware is a type of malware from cryptovirology that threatens to publish the victim's personal data or permanently block access to it unless a ransom is paid.<br>
+    <div class = "rightBar">Ransomware is a type of malware from crypto virology that threatens to publish the victim's personal data or permanently block access to it unless a ransom is paid.<br>
          While some simple ransomware may lock the system without damaging any files, more advanced malware uses a technique called cryptoviral extortion. It encrypts the victim's files, making them inaccessible, and demands a ransom payment to decrypt them.</div>
 
     <h2 class= "rightBar">Ponzi Scheme!</h2>
@@ -363,7 +365,5 @@
     <h2 class= "rightBar">Phishing</h2>
     <div class = "rightBar">Phishing is a type of social engineering where an attacker sends a fraudulent message designed to trick a person into revealing sensitive information to the attacker or to deploy malicious software on the victim's infrastructure like ransomware. </div>
 
-
-    <footer></footer>
 </body>
 </html>
